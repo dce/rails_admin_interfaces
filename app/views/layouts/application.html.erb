@@ -7,8 +7,14 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div class="header">
+    <%= link_to "Rails Admin Interfaces", root_path %>
+  </div>
 
-<%= yield %>
+  <%= yield %>
 
+  <hr />
+
+  <p>This is a sample blog for testing Rails admin interface generators.</p>
 </body>
 </html>
