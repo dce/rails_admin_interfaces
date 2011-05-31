@@ -4,4 +4,6 @@ class Post < ActiveRecord::Base
   validates_presence_of :title
 
   scope :published, :conditions => { :published => true }
+
+  default_scope :order => "created_at DESC"
 end

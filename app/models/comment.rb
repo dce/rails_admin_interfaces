@@ -3,5 +3,5 @@ class Comment < ActiveRecord::Base
 
   validates_presence_of :name, :email, :comment
 
-  default_scope :order => "created_at DESC"
+  default_scope :order => "created_at ASC"
 end
