@@ -4,4 +4,39 @@
   <%= simple_format @post.body %>
 
   <p><em><%= @post.created_at.to_s(:long) %></em></p>
+
+  <h3 id="comments">Comments</h3>
+
+  <ul>
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= simple_format comment.comment %>
+
+        <p><em>&ndash; <%= comment.name %></em></p>
+      </li>
+    <% end %>
+  </ul>
+
+  <% form_for [@post, @comment] do |form| %>
+    <%= error_messages_for :comment %>
+
+    <p>
+      <%= form.label :name %><br />
+      <%= form.text_field :name %>
+    </p>
+
+    <p>
+      <%= form.label :email %><br />
+      <%= form.text_field :email %>
+    </p>
+
+    <p>
+      <%= form.label :comment %><br />
+      <%= form.text_area :comment %>
+    </p>
+
+    <p>
+      <%= form.submit %>
+    </p>
+  <% end %>
 </div>

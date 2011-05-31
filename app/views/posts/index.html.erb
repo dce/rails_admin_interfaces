@@ -4,6 +4,11 @@
 
     <%= simple_format post.body %>
 
-    <p><em><%= post.created_at.to_s(:long) %></em></p>
+    <p>
+      <em>
+        <%= post.created_at.to_s(:long) %> &middot;
+        <%= link_to pluralize(post.comments.count, "comment"), post_path(post, :anchor => "comments") %>
+      </em>
+    </p>
   </div>
 <% end %>
