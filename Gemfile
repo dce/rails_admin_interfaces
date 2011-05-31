@@ -7,6 +7,8 @@ gem 'rake', '0.8.7'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem 'devise'
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
