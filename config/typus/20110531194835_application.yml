@@ -1,0 +1,24 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Comment:
+  fields:
+    default: name, email, comment, post_id, post
+    form: name, email, comment, post_id, post
+  order_by: 
+  relationships: post
+  filters: created_at
+  search: name
+  application: rails_admin_interfaces
+
+Post:
+  fields:
+    default: title, body, published
+    form: title, body, published
+  order_by: 
+  relationships: comments
+  filters: created_at
+  search: title
+  application: rails_admin_interfaces
+
